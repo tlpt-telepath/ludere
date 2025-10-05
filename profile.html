@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tlpt プロフィール | ludere</title>
+  <link rel="stylesheet" href="style/profile.css">
+</head>
+<body>
+  <header class="site-header">
+    <button class="menu-toggle" aria-label="メニューを開閉" aria-controls="primary-menu" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <a href="index.html" class="brand" aria-label="トップページへ">
+      <img src="img/logo.png" alt="ludere ロゴ" class="brand-logo">
+    </a>
+  </header>
+
+  <main class="profile" role="main">
+    <section class="profile-hero">
+      <div class="portrait" aria-hidden="true">
+        <span>tlpt</span>
+      </div>
+      <p class="eyebrow">Member of ludere</p>
+      <h1>tlpt / Creative Technologist</h1>
+      <p class="lead">ludere の中で体験設計と実装を横断するクリエイター。プロトタイピング、UIデザイン、インタラクション開発を通じて「遊び心のあるプロダクト」を形にします。</p>
+      <dl class="profile-meta">
+        <div>
+          <dt>拠点</dt>
+          <dd>東京</dd>
+        </div>
+        <div>
+          <dt>専門</dt>
+          <dd>Creative Coding / UX Engineering</dd>
+        </div>
+        <div>
+          <dt>所属</dt>
+          <dd>個人サークル ludere メンバー</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="profile-grid">
+      <article class="profile-card">
+        <h2>自己紹介</h2>
+        <p>tlpt はフロントエンドとビジュアルデザインを起点に、ストーリーのあるインタラクションづくりを得意としています。ユーザーリサーチを基にしたワイヤリングから、WebGL やモーションを組み合わせた実装まで一貫して担当。「思わず触りたくなる UI」を探求しています。</p>
+      </article>
+      <article class="profile-card">
+        <h2>スキルセット</h2>
+        <ul class="bullet-list">
+          <li>デザインシステム設計と UI デザイン</li>
+          <li>TypeScript / React / Next.js を用いたフロントエンド開発</li>
+          <li>Three.js / WebGL を活用したインタラクション制作</li>
+          <li>プロトタイピングとユーザーテスト設計</li>
+        </ul>
+      </article>
+      <article class="profile-card">
+        <h2>主な制作</h2>
+        <ul class="timeline">
+          <li>
+            <span class="timeline-year">2024</span>
+            <div>
+              <h3>Immersive Brand Promo</h3>
+              <p>ブランドサイトのリニューアルで WebGL 演出と音響反応を実装。離脱率を 28% 改善し、キャンペーン期間のPVを過去最高に更新。</p>
+            </div>
+          </li>
+          <li>
+            <span class="timeline-year">2023</span>
+            <div>
+              <h3>Playful Learning Prototype</h3>
+              <p>ludere 内の R&amp;D プロジェクトとして、日常的に使える学習導線をモーションで補強。ユーザーテストで「継続したくなる体験」と評価。</p>
+            </div>
+          </li>
+          <li>
+            <span class="timeline-year">2022</span>
+            <div>
+              <h3>Festival Explore App</h3>
+              <p>都市型フェス向けナビゲーションアプリを共同制作。GPS を活用したインタラクティブマップと行動ログの可視化を担当。</p>
+            </div>
+          </li>
+        </ul>
+      </article>
+      <article class="profile-card">
+        <h2>ステートメント</h2>
+        <p>「遊びの余白があるほど、人は主体的に物語を紡げる」。tlpt は ludere のメンバーとして、クライアントとユーザーの間にある体験を拡張することを使命としています。</p>
+      </article>
+      <article class="profile-card">
+        <h2>コンタクト</h2>
+        <p>コラボレーションのご相談、イベント登壇などお気軽にご連絡ください。</p>
+        <ul class="contact-list">
+          <li><a href="mailto:tlpt@ludere.example">tlpt@ludere.example</a></li>
+          <li><a href="https://x.com" target="_blank" rel="noopener">X (Twitter)</a></li>
+          <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <nav class="site-nav" id="primary-menu" aria-label="主要メニュー">
+    <ul>
+      <li><a href="index.html">Top</a></li>
+      <li><a href="#">Works</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <script src="script/main.js" defer></script>
+</body>
+</html>
