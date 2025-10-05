@@ -21,18 +21,23 @@ body.menu-open {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1rem;
+  padding: 1.75rem 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 3;
   pointer-events: none;
 }
 
 .menu-toggle {
-  position: relative;
+  position: absolute;
+  left: 1.5rem;
+  top: 1.75rem;
   display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 24px;
-  height: 18px;
+  width: 26px;
+  height: 20px;
   border: none;
   background: none;
   padding: 0;
@@ -54,7 +59,7 @@ body.menu-open {
 }
 
 .menu-toggle.is-open .bar:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+  transform: translateY(9px) rotate(45deg);
 }
 
 .menu-toggle.is-open .bar:nth-child(2) {
@@ -62,11 +67,11 @@ body.menu-open {
 }
 
 .menu-toggle.is-open .bar:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-9px) rotate(-45deg);
 }
 
 .menu-toggle.is-open .bar {
-  background-color: #f9fafb;
+  background-color: #f8fafc;
 }
 
 .logo-stage {
@@ -85,7 +90,7 @@ body.menu-open {
 .site-nav {
   position: fixed;
   inset: 0;
-  background: rgba(17, 24, 39, 0.92);
+  background: rgba(15, 23, 42, 0.94);
   display: none;
   align-items: center;
   justify-content: center;
@@ -105,27 +110,29 @@ body.menu-open {
 }
 
 .site-nav li + li {
-  margin-top: 1.25rem;
+  margin-top: 1.5rem;
 }
 
 .site-nav a {
-  color: #f9fafb;
+  color: #f8fafc;
   text-decoration: none;
-  font-size: 1.25rem;
-  letter-spacing: 0.08em;
+  font-size: 1.35rem;
+  letter-spacing: 0.1em;
 }
 
 @media (min-width: 768px) {
+  .site-header {
+    padding: 2rem 2.5rem 0;
+  }
+
   .menu-toggle {
+    left: 2.5rem;
+    top: 2rem;
     width: 28px;
-    height: 20px;
+    height: 22px;
   }
 
   .logo {
     width: min(200px, 30vw);
-  }
-
-  .site-nav a {
-    font-size: 1.4rem;
   }
 }

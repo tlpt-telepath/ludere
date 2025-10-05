@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Noto Sans JP', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #0f172a;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.75rem 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.menu-toggle {
+  position: absolute;
+  left: 1.5rem;
+  top: 1.75rem;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 20px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  color: #111827;
+  pointer-events: auto;
+}
+
+.menu-toggle:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 4px;
+}
+
+.menu-toggle .bar {
+  height: 2px;
+  width: 100%;
+  background-color: currentColor;
+  transition: transform 0.25s ease, opacity 0.25s ease, background-color 0.25s ease;
+}
+
+.menu-toggle.is-open .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.is-open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.is-open .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.menu-toggle.is-open .bar {
+  background-color: #f8fafc;
+}
+
+.brand {
+  pointer-events: auto;
+}
+
+.brand-logo {
+  width: 140px;
+  height: auto;
+}
+
+.content {
+  padding: 8rem 1.5rem 5rem;
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  gap: 3.5rem;
+}
+
+.content-hero {
+  text-align: center;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.75rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.content-hero h1 {
+  margin: 0;
+  font-size: clamp(2.1rem, 6vw, 3rem);
+  letter-spacing: 0.04em;
+}
+
+.content-hero .lead {
+  margin: 0 auto;
+  max-width: 48rem;
+  line-height: 1.8;
+  color: #475467;
+}
+
+.content-collection {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.collection-items {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.collection-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 22px;
+  padding: 1.75rem;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+  display: grid;
+  gap: 1.25rem;
+}
+
+.collection-card h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.card-meta {
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.card-summary {
+  margin: 0;
+  line-height: 1.7;
+  color: #475467;
+}
+
+.card-link {
+  justify-self: start;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.card-link:hover,
+.card-link:focus-visible {
+  text-decoration: underline;
+}
+
+.card-media img,
+.card-media video {
+  width: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.collection-empty {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  border-radius: 14px;
+  background: rgba(241, 245, 249, 0.8);
+  color: #475467;
+}
+
+.loading-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #475467;
+  font-size: 0.95rem;
+}
+
+.loading-indicator::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid rgba(37, 99, 235, 0.2);
+  border-top-color: #2563eb;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.site-nav {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.94);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  z-index: 2;
+}
+
+.site-nav.open {
+  display: flex;
+}
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.site-nav li + li {
+  margin-top: 1.5rem;
+}
+
+.site-nav a {
+  color: #f8fafc;
+  text-decoration: none;
+  font-size: 1.35rem;
+  letter-spacing: 0.1em;
+}
+
+@media (min-width: 768px) {
+  .content {
+    padding: 9rem 2.5rem 6rem;
+  }
+
+  .site-header {
+    padding: 2rem 2.5rem 0;
+  }
+
+  .menu-toggle {
+    left: 2.5rem;
+    top: 2rem;
+    width: 28px;
+    height: 22px;
+  }
+
+  .brand-logo {
+    width: 160px;
+  }
+
+  .collection-items {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+
+  .collection-card {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .collection-items[data-layout="grid"] {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

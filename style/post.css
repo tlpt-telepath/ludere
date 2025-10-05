@@ -1,0 +1,93 @@
+.content-post {
+  max-width: 760px;
+}
+
+.post {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 28px;
+  padding: 2.5rem 2.25rem;
+  box-shadow: 0 32px 70px rgba(15, 23, 42, 0.14);
+  display: grid;
+  gap: 2rem;
+}
+
+.post header {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.post-title {
+  margin: 0;
+  font-size: clamp(2.1rem, 6vw, 2.8rem);
+  letter-spacing: 0.02em;
+}
+
+.post-meta {
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.post-summary {
+  margin: 0;
+  color: #475467;
+  line-height: 1.8;
+}
+
+.post-body {
+  display: grid;
+  gap: 1.5rem;
+  color: #1f2933;
+  line-height: 1.9;
+  font-size: 1.02rem;
+}
+
+.post-body p {
+  margin: 0;
+}
+
+.post-body h2,
+.post-body h3,
+.post-body h4 {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.post-body h2 {
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+}
+
+.post-body h3 {
+  font-size: 1.3rem;
+  margin-top: 1.25rem;
+}
+
+.post-body ul,
+.post-body ol {
+  margin: 0;
+  padding-left: 1.5rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.post-body blockquote {
+  margin: 0;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid #6366f1;
+  background: rgba(99, 102, 241, 0.08);
+  color: #3730a3;
+  border-radius: 0.75rem;
+}
+
+.post-back {
+  justify-self: start;
+}
+
+@media (max-width: 599px) {
+  .post {
+    padding: 2rem 1.5rem;
+  }
+}
